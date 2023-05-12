@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  @keyframes rotateIn {
+    0% {
+      transform: rotate(-90deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+  @keyframes Art-Anim-right {
+    0% {
+      @apply -right-2 -bottom-36;
+    }
+    50% {
+      @apply right-8 -bottom-28;
+    }
+    100% {
+      @apply -right-2 -bottom-36;
+    }
+  }
+
+  @keyframes Art-Anim-left {
+    0% {
+      @apply -left-2 -top-2;
+    }
+    50% {
+      @apply left-8 top-4;
+    }
+    100% {
+      @apply -left-2 -top-2;
+    }
+  }
+
+  .Art-Anim-left {
+    animation: Art-Anim-left 8s alternate-reverse ease-in-out infinite;
+    animation-delay: 1s;
+  }
+
+  .Art-Anim-right {
+    animation: Art-Anim-right 8s alternate-reverse ease-in-out infinite;
+  }
+
+  .rotateIn {
+    animation: rotateIn 0.1s ease-in;
+  }
+
+  .padding-1 {
+    @apply px-16;
+  }
+}
