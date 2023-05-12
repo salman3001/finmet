@@ -1,4 +1,3 @@
-import { AiOutlineCheckCircle } from "react-icons/ai";
 import leftart from "../../images/blue-design-left.svg";
 import Rightart from "../../images/yellow-design-right.svg";
 import play from "../../images/play+button.svg";

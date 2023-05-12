@@ -1,4 +1,3 @@
-import { GrMoney } from "react-icons/gr";
 import { BsFillCheckCircleFill } from "react-icons/bs";
 const HomeSection4 = () => {
   return (

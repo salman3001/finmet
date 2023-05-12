@@ -1,5 +1,4 @@
 import poster from "../../images/poster.png";
-import steps from "../../images/Finmet-ITS-Steps.png";
 import logo from "../../images/logo.png";
 import { ReactNode } from "react";
 import { AiOutlineForm } from "react-icons/ai";
