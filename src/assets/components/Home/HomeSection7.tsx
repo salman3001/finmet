@@ -7,7 +7,7 @@ const HomeSection7 = () => {
         <img
           src={poster}
           alt=""
-          className="rounded-xl shadow-xl shadow-gray-400 w-full md:max-w-[600px]"
+          className="rounded-xl shadow-xl shadow-gray-400 w-full  lg:max-w-[600px]"
         />
       </div>
       <div className="space-y-6">

@@ -7,13 +7,13 @@ const HomeSection5 = () => {
         Our Accounting Services
       </h1>
       <div className="grid sm:grid-cols-2 gap-2 sm:place-items-center">
-        <div className="space-y-3 border-l-2 pl-6">
+        <div className="space-y-3 sm:border-l-2 sm:pl-6">
           <ListItem link="/Services-Requset" line="Income Tax Services" />
           <ListItem link="/Services-Requset" line="Company Registration" />
           <ListItem link="/Services-Requset" line="MSME Registration" />
           <ListItem link="/Services-Requset" line="ROC Filing" />
         </div>
-        <div className="space-y-3 border-l-2 pl-6">
+        <div className="space-y-3 sm:border-l-2 sm:pl-6">
           <ListItem
             link="/Services-Requset"
             line="GST Registration & Filing Services"

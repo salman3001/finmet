@@ -29,7 +29,7 @@ export default HomeSection6;
 
 const Icon = (prop: { color: string }) => (
   <div
-    className={`p-6 rounded-full  w-28 h-28  flex justify-center items-center ${prop.color}`}
+    className={`p-6 rounded-full  w-28 h-28  flex justify-center shadow-lg shadow-gray-400 items-center ${prop.color}`}
   >
     <BsCalculator size={40} />
   </div>

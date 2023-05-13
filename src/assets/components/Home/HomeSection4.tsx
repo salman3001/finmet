@@ -8,7 +8,7 @@ const HomeSection4 = () => {
           price="999"
           salary="upto &#8377;10"
           detail={[
-            "For salaried individuals with salary less than ₹50 Lacs",
+            "For salaried individuals with salary less than ₹10 Lakhs",
             "For salaried individuals with house property",
             "Tax due/refund status and filing confirmation",
           ]}
@@ -17,7 +17,7 @@ const HomeSection4 = () => {
           price="1499"
           salary="upto &#8377;25"
           detail={[
-            "For salaried individuals with salary less than ₹50 Lacs",
+            "For salaried individuals with salary less than ₹25 Lakhs",
             "For salaried individuals with house property",
             "Tax due/refund status and filing confirmation",
           ]}
@@ -26,7 +26,7 @@ const HomeSection4 = () => {
           price="1999"
           salary="above &#8377;25"
           detail={[
-            "For salaried individuals with salary less than ₹50 Lacs",
+            "For salaried individuals with salary more than ₹25 Lakhs",
             "For salaried individuals with house property",
             "Tax due/refund status and filing confirmation",
           ]}

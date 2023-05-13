@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer components {
+  html {
+    scroll-behavior: smooth;
+  }
   @keyframes rotateIn {
     0% {
       transform: rotate(-90deg);

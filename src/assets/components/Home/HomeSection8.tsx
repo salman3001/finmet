@@ -1,122 +1,448 @@
+import poster from "../../images/poster.png";
+import { BsPlus } from "react-icons/bs";
+import { BiMinus } from "react-icons/bi";
+import { useState } from "react";
+
 const HomeSection8 = () => {
   return (
-    <div className="relative px-5 md:px-16 lg:px-20 xl:24 py-8 md:py-10 lg:py-16 flex gap-6">
-      <div className="sticky top-0 left-0">
-        <p>Lorem ipsum dolor sit amet</p>
-        <p>Lorem ipsum dolor sit amet</p>
-        <p>Lorem ipsum dolor sit amet</p>
+    <div className="px-5 md:px-16 lg:px-20 xl:24  flex flex-col lg:flex-row gap-8">
+      <div className="w-full lg:w-[70%]">
+        <div className="sticky top-0 float-left py-[10vh] hidden xl:inline whitespace-normal w-[20%] h-auto">
+          <div className="flex flex-col gap-4 pt-4 [&>a]:text-lg [&>a]:font-bold  ">
+            <a href="#itr-overview" className="link:bg-red-600">
+              Overview
+            </a>
+            <a href="#itr-documents">Dcuments Required</a>
+            <a href="#itr-checklist">Checklist</a>
+            <a href="#itr-benifits">Benifits</a>
+            <a href="#itr-lasthate">Last Date</a>
+            <a href="#itr-who">Who Should file?</a>
+            <a href="#itr-how">How to file Income tax?</a>
+            <a href="#itr-help">How finmet can help you?</a>
+            <a href="#itr-faq">FAQs?</a>
+            <a href="#itr-updates">Recent Updates</a>
+          </div>
+        </div>
+        <div className="grow  xl:w-[80%] xl:ml-[20%] py-6 lg:py-[10vh] xl:px-6">
+          <div className="space-y-6">
+            <div id="itr-overview" className="space-y-6">
+              <h1 className="text-2xl font-bold">
+                E-Filing Income Tax Returns Online in India - An Overview
+              </h1>
+              <div className="space-y-3">
+                <p>
+                  Every responsible Indian citizen should file income tax to the
+                  government. With present technology, you can easily file your
+                  income tax online. This process is fast and accurate with no
+                  time constraints.
+                </p>
+                <p>
+                  However, Filing income tax return in India through the
+                  official website involves filing ITR forms. There is a
+                  different ITR form for individuals and ITR form for salaried
+                  people. This is a critical task because the income tax
+                  department has various forms titled from ITR 1 to ITR 7. Each
+                  form has a specific function and belongs to a particular
+                  category.
+                </p>
+                <p>
+                  Even if you miss a single field in the form or make any errors
+                  your income tax will not be filed on time. This is where you
+                  need expert guidance. Vakilsearch files income tax for both
+                  individuals and institutions regularly. So you can easily
+                  count on us to file your income tax return online. For that,
+                  you will have to provide us with the following documents.
+                </p>
+              </div>
+            </div>
+            <div id="itr-documents" className="space-y-6">
+              <h1 className="text-2xl font-bold">
+                Documents Required for ITR Return File
+              </h1>
+              <div className="space-y-3">
+                <p>
+                  <h3 className="font-bold">If you are an employee:</h3>
+                  <li>PAN card</li>
+                  <li>Form 16 provided by your employer</li>
+                  <li>Salary slip (**Very essential for e filing of ITR)</li>
+                </p>
+                <p>
+                  <h3 className="font-bold">If you are a business owner:</h3>
+                  <li>Trading report</li>
+                  <li>Business account details</li>
+                  <li>Profit and loss statement if any</li>
+                </p>
+                <p>
+                  <h3 className="font-bold">
+                    Apart from this, you can submit:
+                  </h3>
+                  <li>Investment proofs</li>
+                  <li>Asset purchase/sale documents</li>
+                  <li>ThS certificates provided by banks</li>
+                  <li>Interest income statement</li>
+                  <li>
+                    Receipts regarding donations mutual funds and other forms of
+                    investments.
+                  </li>
+                </p>
+              </div>
+            </div>
+            <div id="itr-checklist" className="space-y-6">
+              <h1 className="text-2xl font-bold">
+                Checklist for Income Tax Return Filing (ITR return)
+              </h1>
+              <div className="space-y-3">
+                <p>
+                  For Filing income tax return, Section 139 (1) of the
+                  Income-tax Act 1961 specifies any individual whose total
+                  income during the previous year is more than the maximum
+                  amount not chargeable to tax should file their income tax
+                  returns online. Let us make it clear: Any individual earning
+                  more than ₹2.5 lakhs, ₹3 lakhs or ₹5 lakhs should file ITR.
+                </p>
+              </div>
+            </div>
+            <div id="itr-benifits" className="space-y-6">
+              <h1 className="text-2xl font-bold">
+                Benefits of E-Filing of Income Tax Return
+              </h1>
+              <div className="space-y-3">
+                <p>The advantages of ITR Filing are:</p>
+                <p>
+                  <span className="font-bold">Loans:</span> Bank loans like
+                  education loans, vehicle loans, personal loans, can be availed
+                  easily as they require the last three year’s IT returns.
+                </p>
+                <p>
+                  <span className="font-bold">Visas:</span> As Immigration
+                  centres scrutinise many documents and IT returns, proofs are a
+                  mandatory document for visa applicants.
+                </p>
+                <p>
+                  <span className="font-bold">Avoid penalties:</span> Hefty
+                  amounts would be charged for non-filing of income tax returns
+                  and hence it is always better to file it to avoid legal
+                  repercussions.
+                </p>
+                <div className="flex max-w-sm py-6 rounded-lg overflow-hidden">
+                  <img src={poster} alt="" className="rounded-lg shadow-sm" />
+                </div>
+              </div>
+            </div>
+            <div id="itr-lasthate" className="space-y-6">
+              <h1 className="text-2xl font-bold">
+                Last Date for Filing Income Tax Returns
+              </h1>
+              <div className="space-y-3">
+                <p>
+                  The return that is currently being filed is for the income you
+                  earned in FY 2022-23, or for the money earned between 1 April
+                  2022 and 31 March 2023, must be submitted before 31 July 2023,
+                  in order to avoid a late filing penalty.
+                </p>
+              </div>
+            </div>
+            <div id="itr-who" className="space-y-6">
+              <h1 className="text-2xl font-bold">
+                Who Should File an Income Tax Return?
+              </h1>
+              <div className="space-y-3">
+                <p>
+                  <h3 className="">
+                    According to the Income Tax Department, the following
+                    entities are required to file yearly IT returns:
+                  </h3>
+                  <li>
+                    Salaried individuals with gross income exceeding the
+                    exemption level before deductions under Sections 80C to 80U
+                  </li>
+                  <li>
+                    Regardless of profit or loss, every firm, whether private
+                    limited, LLP, or partnership, is required to file IT return
+                  </li>
+                  <li>
+                    Individuals who are Directors in a Private Limited Company
+                    or a Partner in a Limited Liability Partnership firm.
+                  </li>
+                  <li>
+                    Individuals who earn dividends from mutual funds, bonds,
+                    equities, fixed deposits, interest, and other sources
+                  </li>
+                  <li>
+                    Individuals that receive income through charity or religious
+                    trusts, as well as income from voluntary contributions
+                  </li>
+                  <li>Individuals and businesses seeking tax refunds</li>
+                  <li>
+                    NRIs and tech professionals on onsite deputation, as well as
+                    anyone with foreign income or assets.
+                  </li>
+                </p>
+              </div>
+            </div>
+            <div id="itr-how" className="space-y-6">
+              <h1 className="text-2xl font-bold">
+                How to File Your Income Tax Return Online
+              </h1>
+              <div className="space-y-3">
+                <p>
+                  For ITR filing online, first and foremost keep all the soft
+                  copies, scanned copies of all the required documents like your
+                  bank statement and last year's return. You should also fill
+                  out income tax Form 16.
+                </p>
+                <p>
+                  <span className="font-bold">itr online apply:</span> Submit
+                  all the required documents to our experts
+                </p>
+                <p>
+                  <span className="font-bold">Step 2:</span> Through the
+                  registered portal our experts will file your income tax return
+                  online
+                </p>
+                <p>
+                  <span className="font-bold">Step 3:</span> ITR Filing Form
+                  will be selected based on your category, and experts will fill
+                  in all required information and claim any applicable
+                  exemptions
+                </p>
+                <p>
+                  <span className="font-bold">Step 4:</span> Our experts will
+                  inform you regarding the tax payable amount if any after all
+                  exemptions
+                </p>
+                <p>
+                  <span className="font-bold">Step 5:</span> Subsequently your
+                  income tax return will be filed without any hassle.
+                </p>
+                <p className="font-bold">
+                  <span>Note:</span> Make sure to fill in accurate details in
+                  every field of the form, and select the applicable ITR Filing
+                  Form based on your criteria. If you have any doubts you can
+                  reach out to our expert and they will help you out.
+                </p>
+                <p>
+                  You should know that non-compliance with filing of income tax
+                  returns can result in huge penalties. So why take that risk,
+                  when you can easily get an expert to file your income tax
+                  returns online!
+                </p>
+              </div>
+            </div>
+            <div id="itr-help" className="space-y-6">
+              <h1 className="text-2xl font-bold">
+                How Vakilsearch Can Help You With ITR Filing?
+              </h1>
+              <div className="space-y-3">
+                <p>
+                  Filing income tax returns on your own is going to be a tedious
+                  task. But if you choose Vakilsearch to file your income tax
+                  returns, the whole process can be completed in just three
+                  steps. We have an expert team who can provide support around
+                  the clock and file your income tax returns online without any
+                  delay. Why Do It Yourselves, when our experts can do it for
+                  you ASAP
+                </p>
+                <p>
+                  <span className="font-bold">Affordable price:</span> Submit
+                  When compared to other competitors we provide the most
+                  affordable price to file your income tax return online
+                </p>
+                <p>
+                  <table className="w-full">
+                    <thead>
+                      <tr className="border ">
+                        <th className="text-start border w-[70%] p-1 pl-2">
+                          Category
+                        </th>
+                        <th className="text-start w-[30%]  p-1 pl-2 ">
+                          Charges
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td className="text-start border w-[70%] p-1 pl-2">
+                          Salaried Employees upto ₹10 Lakhs
+                        </td>
+                        <td className="text-start border w-[70%] p-1 pl-2">
+                          ₹999/-
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className="text-start border w-[70%] p-1 pl-2">
+                          Salaried Employees upto ₹25 Lakhs
+                        </td>
+                        <td className="text-start border w-[70%] p-1 pl-2">
+                          ₹1499/-
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className="text-start border w-[70%] p-1 pl-2">
+                          Salaried Employees above ₹25 Lakhs
+                        </td>
+                        <td className="text-start border w-[70%] p-1 pl-2">
+                          ₹1999/-
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </p>
+                <p>
+                  <span className="font-bold">Super fast process</span> If you
+                  are running low on time or pretty close to the deadline then
+                  you should reach out to our experts. We provide the fastest
+                  income tax returns filing process in the country
+                </p>
+                <p>
+                  <span className="font-bold">Adept team</span> Filing income
+                  tax returns is one of our daily jobs, our team does it with
+                  such ease!
+                </p>
+                <p>
+                  <span className="font-bold">Popular in town</span> More than
+                  thousands of companies choose Vakilsearch for filing their
+                  Income tax. Apart from this, we have a large number of
+                  individuals who choose Vakilsearch for filing their income tax
+                  return online.
+                </p>
+                <p>
+                  All you have to do is reach out to us, sit back, relax, and
+                  watch your income tax return filing at super ease.
+                </p>
+              </div>
+            </div>
+            <div id="itr-faq" className="space-y-6">
+              <h1 className="text-2xl font-bold">
+                FAQs on E-Filing of Income Tax Returns Online 2023-24
+              </h1>
+              <div className="space-y-2">
+                <Accordian
+                  title="My company deducts TDS, should I still file my tax return?"
+                  detail="Of course, technically there is a difference between filing income tax returns and detecting TDS. In this case, when you file a tax return it becomes a proof of payment of all taxes due. The income tax return documents will also be an added benefit when you apply for a loan. Also, if there are any excess taxes deducted the same will be refunded to your bank account"
+                />
+                <Accordian
+                  title="If I had paid extra tax how would it be refunded to me?"
+                  detail="The government has provided options to refund your excess tax amount when you file your IT return. This will be credited directly to the specific bank account through an ECS. Make sure to file the bank details with utmost care."
+                />
+                <Accordian
+                  title="Should I also file a return of income when I am at a loss?"
+                  detail="You must file a return in time even if you face any financial loss in that particular year. You can easily carry forward to adjusting with the positive income in the following years. But this option will be provided only if you file your income tax return on time. For further queries, you can write to us."
+                />
+                <Accordian
+                  title="Should I attach any documents along with the ITR forms?"
+                  detail="Technically an income tax return form should not be attached to any other documents. However, you should provide these documents in proper order in case of any inquiry."
+                />
+                <Accordian
+                  title="What is the minimum salary to ITR Filing Online?"
+                  detail="As per the Income tax Act, you should file an income tax return in India if your total income exceeds ₹2.5 lakh in the given financial year."
+                />
+                <Accordian
+                  title="How to file an Income Tax Return online?"
+                  detail="The most easy way is to file the returns online through Vakilsearch. There are three methods for submitting income tax returns online:
+To e-File, use a Digital Signature Certificate (DSC)
+e-File without a Certificate of Digital Signature
+Using an e-Return Intermediary (ERI) to electronically file the income tax return with or without a digital signature certificate (DSC)."
+                />
+                <Accordian
+                  title="When to file Income Tax Return for AY 2023 24?"
+                  detail="The due date to file Income Tax Return for AY 2023-24 is 31 July 2023 for individuals and HUFs who are not required to get their accounts audited"
+                />
+                <Accordian
+                  title="What is the due date of return filing for Companies?"
+                  detail="The due date of return filing for Companies is 30 September 2023"
+                />
+                <Accordian
+                  title="What are the tax brackets for 2023 2024?"
+                  detail="The tax brackets for AY 2023-24 are not announced yet. They are usually announced in the annual budget, which is presented in the month of February"
+                />
+                <Accordian
+                  title="How do I pay tax to the government?"
+                  detail="You can pay tax to the government through various modes such as net banking, debit card, credit card, or by visiting the bank."
+                />
+                <Accordian
+                  title="How can I download ITR without login?"
+                  detail="You cannot download ITR without login. To download ITR, you need to log in to the e-filing portal of the Income Tax Department using your login credentials."
+                />
+              </div>
+            </div>
+            <div id="itr-updates" className="space-y-6">
+              <h1 className="text-2xl font-bold">Recent Updates</h1>
+              <div className="space-y-3">
+                <p>
+                  During the current fiscal year, 2022–2023, the Central Board
+                  of Direct Taxes (CBDT) has announced the ITR forms ITR-1 to
+                  ITR-6 (AY 2023-24). The government announced the ITR-7 form on
+                  February 14, 2023. ITR forms haven't undergone any significant
+                  changes. The ITR forms have, however, been announced over two
+                  months earlier than usual.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div className="grow p-16">
-        <p>
-          GST Registration Online - An Overview Launched on 1 July 2017, the
-          Goods & Services Tax (GST) applies to all Indian service providers
-          (including freelancers), traders and manufacturers. A variety of
-          Central taxes like Service Tax, Excise Duty, CST and state taxes like
-          Entertainment Tax, Luxury Tax, Octroi, VAT are accumulated in the GST.
-          Also, taxpayers with a turnover of less than ₹1.5 crore can choose a
-          composition scheme to get rid of tedious GST formalities and pay GST
-          at a fixed rate of turnover. Every product goes through multiple
-          stages along the supply chain, including purchasing raw materials,
-          manufacturing, selling to the wholesaler, selling to the retailer and
-          then the final sale to the consumer. Interestingly, GST will be levied
-          on all of these 3 stages. Let’s say if a product is produced in West
-          Bengal but is being consumed in Uttar Pradesh, the entire revenue will
-          go to Uttar Pradesh. What Are the Components of GST? GST has three tax
-          components, namely: Central Goods and Services Tax or CGST, it is a
-          central government State Goods and Services Tax or SGST which is a
-          state component. Where centre and state will levy GST on all entities
-          for all the transaction in the state The Integrated Goods and Services
-          Tax (IGST), to be levied by the centre, i.e. when a transaction
-          happens from one state to another. Mandatory Documents For Online GST
-          Registration The list of documents required for registration of GST
-          for various business are as follows: Proprietorship PAN Card and
-          address proof of proprietor LLP PAN Card of LLP LLP Agreement
-          Partners’ names and address proof Private Limited Company Certificate
-          of Incorporation PAN Card of Company Articles of Association, AOA
-          Memorandum of Association, MOA Resolution signed by board members
-          Identity and address proof of directors Digital Signature The
-          Following Can Be Shown as Proof of Address of a Director Passport
-          Voter Identity Card Aadhar Card Ration Card Telephone or Electricity
-          Bill Driving License Bank Account Statement Add what works as identity
-          proof, One can use a PAN Card, Aadhar Card as identity proof. For
-          address proof, any of the director’s can show their voters ID,
-          passport, telephone bill, electricity bill and telephone bill. GST
-          Registration Process Step 1: To apply GST Registration Online, visit
-          the GST portal and select ‘New GST Registration’ Step 2: Fill in the
-          necessary details like name of business, state, pan card details, etc
-          Step 3: Enter the OTP and click proceed Step 4: Make a note of the
-          Temporary Reference Number(TRN) Step 5: Check the GST portal and
-          select ‘Register’ in the ‘Taxpayers’ menu Step 6: Enter the TRN and
-          proceed Step 7: Enter the OTP received on your registered mobile
-          number or your email and then proceed Step 8: You can check the status
-          of your application on the next page Step 9: Fill in the necessary
-          details and upload the necessary documents Step 10: Submit your
-          application after verifying by one of the three methods given Step 11:
-          After completion, you will receive the Application Reference
-          Number(ARN) on your registered mobile number and email id Step 12: Now
-          you can access the status of the ARN on the GST portal. After
-          successful registration, you will get your GST registration
-          certificate and GSTIN after verification of the GST application and
-          other mandatory GST registration documents by the GST officer. Be
-          aware that no hard copies of the certificate will be issued and the
-          GST certificate can be downloaded from the GST Portal. Who Needs a GST
-          Registration Service? Any individual or business entity that carries
-          out taxable supplies of goods or services Annual turnover of the
-          business exceeds the prescribed threshold limit (currently ₹20 lakhs
-          for most businesses) E-commerce operators that facilitate the supply
-          of goods and services through their platform Non-resident taxable
-          persons who occasionally supply goods or services in India Businesses
-          that are involved in inter-state supply of goods or services Input
-          service distributors who distribute input tax credit to their branches
-          or units Casual taxable persons who supply goods or services
-          occasionally in India Businesses that were previously registered under
-          the old tax regime (VAT, Service Tax, etc.) and have migrated to GST.
-          What is a GST Certificate? A GST Certificate is a document issued by
-          the Indian government to businesses registered under the Goods and
-          Services Tax (GST) system. It serves as proof of the business's
-          registration under GST and includes details such as the business's GST
-          identification number, name, and address. Businesses are required to
-          have a GST Certificate to be able to charge and collect GST from
-          customers. It is also used for various other purposes such as availing
-          input tax credits, applying for loans and participating in tenders.
-          What Are the GST Tax Rates? Goods and Services Tax (GST) is a
-          value-added tax that is levied on the supply of goods and services in
-          India. The GST tax rates in India are as follows: 0% - This rate is
-          applicable for essential items such as food grains, fresh vegetables,
-          and medical supplies. 5% - This rate is applicable for items such as
-          processed food, packaged food, and some household items. 12% - This
-          rate is applicable for items such as mobile phones, laptops, and
-          television sets. 18% - This rate is applicable for items such as air
-          conditioners, refrigerators, and washing machines. 28% - This rate is
-          applicable for items such as luxury cars, tobacco, and aerated
-          beverages. In addition to these rates, there are some special rates
-          that are applicable to specific goods and services. For example, gold
-          is taxed at 3%, while crude oil and natural gas are taxed at 6%. GST
-          is also levied on services such as telecom, insurance, and banking at
-          the rate of 18%. It's important to note that GST rates are subject to
-          change and may vary depending on the type of goods or services being
-          supplied. It's always a good idea to check the current GST rates
-          before making a purchase or offering a service. You can see the tax
-          rates for all the products here:
-          https://cbec-gst.gov.in/gst-goods-services-rates.html Check out the
-          GST calculator, which comes in handy to calculate the Goods and
-          Service Tax using different slabs. What is GSTIN? GSTIN is a unique
-          identification number given to each GST taxpayer. To verify a GSTIN
-          number, a person who has a GST number can log onto the GST portal.
-          What is the GSTN (Goods and Service Tax Network)? The Goods and
-          Service Tax Network (or GSTN) is section 8 (non-profit),
-          non-government, private limited company. GSTN is a one-stop solution
-          for all your indirect tax requirements. GSTN is responsible for
-          maintaining the Indirect Taxation platform for GST to help you
-          prepare, file, rectify returns and make payments of your indirect tax
-          liabilities. Penalties For Failure To GST Registration As per the
-          Section 122 of the CGST act, in India, there is a direct penalty for
-          all those taxable person
-        </p>
+
+      <div className="sticky  float-right top-0 pb-6 lg:py-[11vh] w-full h-min lg:w-[30%]">
+        <form action="" className="space-y-6 border p-8 rounded-lg shadow-lg">
+          <h1 className="text-center text-lg font-bold ">Get More Details</h1>
+
+          <input
+            type="email"
+            placeholder="Email*"
+            className="border-b border-gray-300 p-2 w-full"
+          />
+          <input
+            type="number"
+            placeholder="mobile*"
+            className="border-b border-gray-300 p-2 w-full"
+          />
+          <input
+            type="text"
+            placeholder="Select State*"
+            className="border-b border-gray-300 p-2 w-full"
+          />
+          <div className="pt-4">
+            <button className="p-2 px-8 rounded-sm bg-rose-600 text-white w-full">
+              Talk to an ITR expert
+            </button>
+          </div>
+        </form>
       </div>
-      <div>form</div>
     </div>
   );
 };
 
 export default HomeSection8;
+
+const Accordian = (prop: { title: string; detail: string }) => {
+  const [state, setState] = useState(false);
+  return (
+    <div className="">
+      <div
+        className={`flex justify-between p-2 items-center cursor-pointer hover:shadow-lg mb-4 ${
+          state && "shadow-lg"
+        }`}
+        onClick={() => {
+          setState((state) => !state);
+        }}
+      >
+        <p>{prop.title}</p>
+        <div>
+          {state ? (
+            <BiMinus color="#e11d48" size={25} />
+          ) : (
+            <BsPlus color="#e11d48" size={30} />
+          )}
+        </div>
+      </div>
+      <div
+        className={`${
+          state ? "h-auto p-2" : "h-0"
+        } overflow-hidden transition-all duration-300 text-gray-500 `}
+      >
+        {prop.detail}
+      </div>
+    </div>
+  );
+};

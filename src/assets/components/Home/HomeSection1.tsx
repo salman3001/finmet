@@ -16,7 +16,7 @@ const HomeSection1 = () => {
         alt=""
         className="absolute -right-10 -z-10 -bottom-32 opacity-10  scale-125 rotate-90 Art-Anim-right"
       />
-      <div className="flex flex-col justify-start h-full gap-10">
+      <div className="flex flex-col justify-center h-full gap-10">
         <h1 className="text-5xl max-w-lg font-bold text-[#22262a]">
           E-Filing of Income Tax Return Online 2023-24
         </h1>
@@ -41,7 +41,7 @@ const HomeSection1 = () => {
           <p>4.3/5 Happy Reviews</p>
         </div>
       </div>
-      <div className="w-full flex justify-center h-full items-start">
+      <div className="w-full flex justify-center  h-full items-center">
         <form
           action=""
           className="bg-white space-y-4 text-black p-5 lg:p-10 rounded-lg shadow-2xl  max-w-lg w-full "
