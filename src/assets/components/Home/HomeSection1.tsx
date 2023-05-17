@@ -2,8 +2,11 @@ import leftart from "../../images/blue-design-left.svg";
 import Rightart from "../../images/yellow-design-right.svg";
 import play from "../../images/play+button.svg";
 import google from "../../images/google-banner-review-new.png";
+import { IModalContent } from "../Types";
 
-const HomeSection1 = () => {
+const HomeSection1 = (prop: {
+  togelModal: (content: IModalContent) => void;
+}) => {
   return (
     <div className="relative px-5 md:px-16 lg:px-20 xl:24 py-8 md:py-10 lg:py-16 grid md:grid-cols-2 gap-8 place-items-center overflow-hidden min-h-[90vh]">
       <img
@@ -31,9 +34,16 @@ const HomeSection1 = () => {
             </span>
           </p>
         </div>
-        <a href="" className="flex items-center text-xl gap-4">
-          <img src={play} alt="" className="h-[4.25rem]" />
-          <p>ITR explained in 60 seconds</p>
+        <a
+          href=""
+          className="flex items-center text-xl gap-5"
+          onClick={(e) => {
+            e.preventDefault();
+            prop.togelModal("youtube-Video");
+          }}
+        >
+          <img src={play} alt="" className="h-[4.0rem]" />
+          <p>2 mins to Understand - Income tax</p>
         </a>
 
         <div className="flex items-center text-xl gap-4">

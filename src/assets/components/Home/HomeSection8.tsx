@@ -124,8 +124,12 @@ const HomeSection8 = () => {
                   and hence it is always better to file it to avoid legal
                   repercussions.
                 </p>
-                <div className="flex max-w-sm py-6 rounded-lg overflow-hidden">
-                  <img src={poster} alt="" className="rounded-lg shadow-sm" />
+                <div className="flex  py-6 rounded-lg overflow-hidden justify-center w-full">
+                  <img
+                    src={poster}
+                    alt=""
+                    className="rounded-lg shadow-sm max-w-xl w-full"
+                  />
                 </div>
               </div>
             </div>
