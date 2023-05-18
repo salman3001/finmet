@@ -1,5 +1,6 @@
 import poster from "../../images/finmetindia.png";
 import { AiOutlineMail } from "react-icons/ai";
+
 const HomeSection7 = () => {
   return (
     <div className="grid lg:grid-cols-2 px-5 md:px-16 lg:px-20 xl:24 py-8 md:py-10 lg:py-16 gap-12">

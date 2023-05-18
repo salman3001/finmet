@@ -1,4 +1,3 @@
-import { IModalContent } from "../Types";
 import HomeSeciton2 from "./HomeSeciton2";
 import HomeSection1 from "./HomeSection1";
 import HomeSection3 from "./HomeSection3";
@@ -8,10 +7,10 @@ import HomeSection6 from "./HomeSection6";
 import HomeSection7 from "./HomeSection7";
 import HomeSection8 from "./HomeSection8";
 
-const Home = (prop: { togelModal: (content: IModalContent) => void }) => {
+const Home = () => {
   return (
     <>
-      <HomeSection1 togelModal={prop.togelModal} />
+      <HomeSection1 />
       <HomeSeciton2 />
       <HomeSection3 />
       <HomeSection4 />

@@ -1,7 +1,6 @@
 import poster from "../../images/poster.png";
 import { BsPlus } from "react-icons/bs";
 import { BiMinus } from "react-icons/bi";
-import { useState } from "react";
 
 const HomeSection8 = () => {
   return (
@@ -322,26 +321,32 @@ const HomeSection8 = () => {
               </h1>
               <div className="space-y-2">
                 <Accordian
+                  index="1"
                   title="My company deducts TDS, should I still file my tax return?"
                   detail="Of course, technically there is a difference between filing income tax returns and detecting TDS. In this case, when you file a tax return it becomes a proof of payment of all taxes due. The income tax return documents will also be an added benefit when you apply for a loan. Also, if there are any excess taxes deducted the same will be refunded to your bank account"
                 />
                 <Accordian
+                  index="2"
                   title="If I had paid extra tax how would it be refunded to me?"
                   detail="The government has provided options to refund your excess tax amount when you file your IT return. This will be credited directly to the specific bank account through an ECS. Make sure to file the bank details with utmost care."
                 />
                 <Accordian
+                  index="3"
                   title="Should I also file a return of income when I am at a loss?"
                   detail="You must file a return in time even if you face any financial loss in that particular year. You can easily carry forward to adjusting with the positive income in the following years. But this option will be provided only if you file your income tax return on time. For further queries, you can write to us."
                 />
                 <Accordian
+                  index="4"
                   title="Should I attach any documents along with the ITR forms?"
                   detail="Technically an income tax return form should not be attached to any other documents. However, you should provide these documents in proper order in case of any inquiry."
                 />
                 <Accordian
+                  index="5"
                   title="What is the minimum salary to ITR Filing Online?"
                   detail="As per the Income tax Act, you should file an income tax return in India if your total income exceeds ₹2.5 lakh in the given financial year."
                 />
                 <Accordian
+                  index="6"
                   title="How to file an Income Tax Return online?"
                   detail="The most easy way is to file the returns online through Vakilsearch. There are three methods for submitting income tax returns online:
 To e-File, use a Digital Signature Certificate (DSC)
@@ -349,22 +354,27 @@ e-File without a Certificate of Digital Signature
 Using an e-Return Intermediary (ERI) to electronically file the income tax return with or without a digital signature certificate (DSC)."
                 />
                 <Accordian
+                  index="7"
                   title="When to file Income Tax Return for AY 2023 24?"
                   detail="The due date to file Income Tax Return for AY 2023-24 is 31 July 2023 for individuals and HUFs who are not required to get their accounts audited"
                 />
                 <Accordian
+                  index="8"
                   title="What is the due date of return filing for Companies?"
                   detail="The due date of return filing for Companies is 30 September 2023"
                 />
                 <Accordian
+                  index="9"
                   title="What are the tax brackets for 2023 2024?"
                   detail="The tax brackets for AY 2023-24 are not announced yet. They are usually announced in the annual budget, which is presented in the month of February"
                 />
                 <Accordian
+                  index="10"
                   title="How do I pay tax to the government?"
                   detail="You can pay tax to the government through various modes such as net banking, debit card, credit card, or by visiting the bank."
                 />
                 <Accordian
+                  index="11"
                   title="How can I download ITR without login?"
                   detail="You cannot download ITR without login. To download ITR, you need to log in to the e-filing portal of the Income Tax Department using your login credentials."
                 />
@@ -388,27 +398,54 @@ Using an e-Return Intermediary (ERI) to electronically file the income tax retur
       </div>
 
       <div className="sticky  float-right top-0 pb-6 lg:py-[11vh] w-full h-min lg:w-[30%]">
-        <form action="" className="space-y-6 border p-8 rounded-lg shadow-lg">
-          <h1 className="text-center text-lg font-bold ">Get More Details</h1>
-
+        <form
+          action="/request_mail.php"
+          method="POST"
+          className="bg-white space-y-4 text-black p-5 lg:p-10 rounded-lg shadow-2xl   w-full "
+        >
+          <h1 className="text-xl font-bold text-center">Get Started! </h1>
           <input
-            type="email"
-            placeholder="Email*"
+            type="text"
+            required
+            name="fname"
+            placeholder="Name*"
             className="border-b border-gray-300 p-2 w-full"
           />
           <input
             type="number"
+            name="phone"
+            required
             placeholder="mobile*"
             className="border-b border-gray-300 p-2 w-full"
           />
           <input
+            type="email"
+            name="email"
+            required
+            placeholder="Email"
+            className="border-b border-gray-300 p-2 w-full"
+          />
+          <input
+            name="city"
             type="text"
-            placeholder="Select State*"
+            required
+            placeholder="City*"
+            className="border-b border-gray-300 p-2 w-full"
+          />
+          <input
+            name="message"
+            type="text"
+            required
+            placeholder="Service type*"
             className="border-b border-gray-300 p-2 w-full"
           />
           <div className="pt-4">
-            <button className="p-2 px-8 rounded-sm bg-rose-600 text-white w-full">
-              Talk to an ITR expert
+            <button
+              id="form-btn"
+              type="submit"
+              className="p-2 px-8 rounded-sm bg-rose-600 text-white w-full"
+            >
+              Submit
             </button>
           </div>
         </form>
@@ -419,34 +456,29 @@ Using an e-Return Intermediary (ERI) to electronically file the income tax retur
 
 export default HomeSection8;
 
-const Accordian = (prop: { title: string; detail: string }) => {
-  const [state, setState] = useState(false);
+const Accordian = (prop: { title: string; detail: string; index: string }) => {
   return (
-    <div className="">
-      <div
-        className={`flex justify-between p-2 items-center cursor-pointer hover:shadow-lg mb-4 ${
-          state && "shadow-lg"
-        }`}
-        onClick={() => {
-          setState((state) => !state);
-        }}
+    <div className="relative">
+      <input
+        type="checkbox"
+        className="peer hidden"
+        id={"accordian" + prop.index}
+      />
+      <label
+        htmlFor={"accordian" + prop.index}
+        className="flex justify-between p-2 items-center cursor-pointer hover:shadow-lg mb-4 peer-checked:shadow-lg "
       >
         <p>{prop.title}</p>
-        <div>
-          {state ? (
-            <BiMinus color="#e11d48" size={25} />
-          ) : (
-            <BsPlus color="#e11d48" size={30} />
-          )}
-        </div>
+      </label>
+      <div className="absolute right-2 top-2 peer-checked:block hidden">
+        <BiMinus color="#e11d48" size={25} className="acc-plus " />
       </div>
-      <div
-        className={`${
-          state ? "h-auto p-2" : "h-0"
-        } overflow-hidden transition-all duration-300 text-gray-500 `}
-      >
+      <div className="absolute right-2 top-2 peer-checked:hidden block">
+        <BsPlus color="#e11d48" size={25} className="acc-plus " />
+      </div>
+      <label className="p-2 hidden overflow-hidden transition-all duration-300 text-gray-500 peer-checked:block">
         {prop.detail}
-      </div>
+      </label>
     </div>
   );
 };
