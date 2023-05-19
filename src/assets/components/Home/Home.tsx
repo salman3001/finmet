@@ -16,7 +16,7 @@ const Home = (prop: { togelModal: (content: IModalContent) => void }) => {
       <HomeSection3 />
       <HomeSection4 />
       <HomeSection5 />
-      <HomeSection6 />
+      <HomeSection6 togelModal={prop.togelModal} />
       <HomeSection7 />
       <HomeSection8 />
     </>

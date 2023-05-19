@@ -1,6 +1,7 @@
 import { RiCloseCircleFill } from "react-icons/ri";
 import YoutubeVideo from "./YoutubeVideo";
 import { IModalContent } from "./Types";
+import ITCalculator from "./ITCalculator";
 
 const Modal = (prop: {
   content: IModalContent;
@@ -23,6 +24,7 @@ const Modal = (prop: {
             }}
           >
             {prop.content === "youtube-Video" && <YoutubeVideo />}
+            {prop.content === "ITCalculator" && <ITCalculator />}
             <div className="absolute top-2 right-2 cursor-pointer">
               <RiCloseCircleFill
                 color="#e11d48"
