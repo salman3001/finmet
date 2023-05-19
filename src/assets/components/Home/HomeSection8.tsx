@@ -1,6 +1,8 @@
 import poster from "../../images/poster.png";
 import { BsPlus } from "react-icons/bs";
 import { BiMinus } from "react-icons/bi";
+import { useState } from "react";
+import GetStartedForm from "../GetStartedForm";
 
 const HomeSection8 = () => {
   return (
@@ -47,7 +49,7 @@ const HomeSection8 = () => {
                 <p>
                   Even if you miss a single field in the form or make any errors
                   your income tax will not be filed on time. This is where you
-                  need expert guidance. Vakilsearch files income tax for both
+                  need expert guidance. finmet files income tax for both
                   individuals and institutions regularly. So you can easily
                   count on us to file your income tax return online. For that,
                   you will have to provide us with the following documents.
@@ -234,22 +236,33 @@ const HomeSection8 = () => {
             </div>
             <div id="itr-help" className="space-y-6">
               <h1 className="text-2xl font-bold">
-                How Vakilsearch Can Help You With ITR Filing?
+                Here's how Finmet can help you with ITR filing:
               </h1>
               <div className="space-y-3">
+
                 <p>
-                  Filing income tax returns on your own is going to be a tedious
-                  task. But if you choose Vakilsearch to file your income tax
-                  returns, the whole process can be completed in just three
-                  steps. We have an expert team who can provide support around
-                  the clock and file your income tax returns online without any
-                  delay. Why Do It Yourselves, when our experts can do it for
-                  you ASAP
+                  <span className="font-bold">Expert Guidance:</span> Our knowledgeable experts will guide you through the entire process, explaining the necessary documents, deductions, and exemptions applicable to your specific circumstances. We take the time to understand your financial situation and provide personalized advice to optimize your tax returns.
                 </p>
                 <p>
-                  <span className="font-bold">Affordable price:</span> Submit
-                  When compared to other competitors we provide the most
-                  affordable price to file your income tax return online
+                  <span className="font-bold">Document Preparation: </span> We assist you in gathering and organizing all the required documents, such as salary statements, investment proofs, rent receipts, and other relevant financial records. Our team ensures that your documents are complete, accurate, and compliant with tax regulations.
+                </p>
+                <p>
+                  <span className="font-bold">Income Tax Calculation: </span> We meticulously calculate your taxable income, taking into account various factors such as salary, investments, allowances, deductions, and exemptions. Our experts leverage their knowledge and cutting-edge tools to maximize your eligible deductions and minimize your tax liability.
+                </p>
+                <p>
+                  <span className="font-bold">Filing Assistance: </span> Our professionals handle the entire filing process on your behalf. We prepare and submit your income tax returns electronically, ensuring that they meet all the necessary legal requirements. We double-check the accuracy of your returns to minimize the chances of errors or discrepancies.
+                </p>
+                <p>
+                  <span className="font-bold">Timely Updates: </span> We keep you informed about the latest developments in tax laws and regulations, including changes in tax slabs, deductions, and compliance requirements. Our team ensures that you are well-prepared and aware of any updates that may impact your tax filing.
+                </p>
+                <p>
+                  Year-round Tax Planning: Beyond ITR filing, we offer year-round tax planning services to help you proactively manage your tax obligations. Our experts work with you to devise strategies that minimize your tax liability, optimize investments, and plan for long-term financial goals.
+                </p>
+                <p>
+                  At finmet, we strive to make ITR filing a stress-free experience for individuals and businesses alike. With our expertise and personalized approach, you can trust us to handle your tax matters efficiently, accurately, and with the utmost confidentiality.
+                </p>
+                <p>
+                  Don't let the complexities of ITR filing overwhelm you. Contact us today and let us help you navigate the tax landscape with ease and confidence!
                 </p>
                 <p>
                   <table className="w-full">
@@ -304,9 +317,9 @@ const HomeSection8 = () => {
                 </p>
                 <p>
                   <span className="font-bold">Popular in town</span> More than
-                  thousands of companies choose Vakilsearch for filing their
+                  thousands of companies choose finmet for filing their
                   Income tax. Apart from this, we have a large number of
-                  individuals who choose Vakilsearch for filing their income tax
+                  individuals who choose finmet for filing their income tax
                   return online.
                 </p>
                 <p>
@@ -321,60 +334,49 @@ const HomeSection8 = () => {
               </h1>
               <div className="space-y-2">
                 <Accordian
-                  index="1"
                   title="My company deducts TDS, should I still file my tax return?"
                   detail="Of course, technically there is a difference between filing income tax returns and detecting TDS. In this case, when you file a tax return it becomes a proof of payment of all taxes due. The income tax return documents will also be an added benefit when you apply for a loan. Also, if there are any excess taxes deducted the same will be refunded to your bank account"
                 />
                 <Accordian
-                  index="2"
                   title="If I had paid extra tax how would it be refunded to me?"
                   detail="The government has provided options to refund your excess tax amount when you file your IT return. This will be credited directly to the specific bank account through an ECS. Make sure to file the bank details with utmost care."
                 />
                 <Accordian
-                  index="3"
                   title="Should I also file a return of income when I am at a loss?"
                   detail="You must file a return in time even if you face any financial loss in that particular year. You can easily carry forward to adjusting with the positive income in the following years. But this option will be provided only if you file your income tax return on time. For further queries, you can write to us."
                 />
                 <Accordian
-                  index="4"
                   title="Should I attach any documents along with the ITR forms?"
                   detail="Technically an income tax return form should not be attached to any other documents. However, you should provide these documents in proper order in case of any inquiry."
                 />
                 <Accordian
-                  index="5"
                   title="What is the minimum salary to ITR Filing Online?"
                   detail="As per the Income tax Act, you should file an income tax return in India if your total income exceeds ₹2.5 lakh in the given financial year."
                 />
                 <Accordian
-                  index="6"
                   title="How to file an Income Tax Return online?"
-                  detail="The most easy way is to file the returns online through Vakilsearch. There are three methods for submitting income tax returns online:
+                  detail="The most easy way is to file the returns online through finmet. There are three methods for submitting income tax returns online:
 To e-File, use a Digital Signature Certificate (DSC)
 e-File without a Certificate of Digital Signature
 Using an e-Return Intermediary (ERI) to electronically file the income tax return with or without a digital signature certificate (DSC)."
                 />
                 <Accordian
-                  index="7"
                   title="When to file Income Tax Return for AY 2023 24?"
                   detail="The due date to file Income Tax Return for AY 2023-24 is 31 July 2023 for individuals and HUFs who are not required to get their accounts audited"
                 />
                 <Accordian
-                  index="8"
                   title="What is the due date of return filing for Companies?"
                   detail="The due date of return filing for Companies is 30 September 2023"
                 />
                 <Accordian
-                  index="9"
                   title="What are the tax brackets for 2023 2024?"
                   detail="The tax brackets for AY 2023-24 are not announced yet. They are usually announced in the annual budget, which is presented in the month of February"
                 />
                 <Accordian
-                  index="10"
                   title="How do I pay tax to the government?"
                   detail="You can pay tax to the government through various modes such as net banking, debit card, credit card, or by visiting the bank."
                 />
                 <Accordian
-                  index="11"
                   title="How can I download ITR without login?"
                   detail="You cannot download ITR without login. To download ITR, you need to log in to the e-filing portal of the Income Tax Department using your login credentials."
                 />
@@ -398,57 +400,7 @@ Using an e-Return Intermediary (ERI) to electronically file the income tax retur
       </div>
 
       <div className="sticky  float-right top-0 pb-6 lg:py-[11vh] w-full h-min lg:w-[30%]">
-        <form
-          action="/request_mail.php"
-          method="POST"
-          className="bg-white space-y-4 text-black p-5 lg:p-10 rounded-lg shadow-2xl   w-full "
-        >
-          <h1 className="text-xl font-bold text-center">Get Started! </h1>
-          <input
-            type="text"
-            required
-            name="fname"
-            placeholder="Name*"
-            className="border-b border-gray-300 p-2 w-full"
-          />
-          <input
-            type="number"
-            name="phone"
-            required
-            placeholder="mobile*"
-            className="border-b border-gray-300 p-2 w-full"
-          />
-          <input
-            type="email"
-            name="email"
-            required
-            placeholder="Email"
-            className="border-b border-gray-300 p-2 w-full"
-          />
-          <input
-            name="city"
-            type="text"
-            required
-            placeholder="City*"
-            className="border-b border-gray-300 p-2 w-full"
-          />
-          <input
-            name="message"
-            type="text"
-            required
-            placeholder="Service type*"
-            className="border-b border-gray-300 p-2 w-full"
-          />
-          <div className="pt-4">
-            <button
-              id="form-btn"
-              type="submit"
-              className="p-2 px-8 rounded-sm bg-rose-600 text-white w-full"
-            >
-              Submit
-            </button>
-          </div>
-        </form>
+        <GetStartedForm />
       </div>
     </div>
   );
@@ -456,29 +408,32 @@ Using an e-Return Intermediary (ERI) to electronically file the income tax retur
 
 export default HomeSection8;
 
-const Accordian = (prop: { title: string; detail: string; index: string }) => {
+const Accordian = (prop: { title: string; detail: string }) => {
+  const [state, setState] = useState(false);
   return (
-    <div className="relative">
-      <input
-        type="checkbox"
-        className="peer hidden"
-        id={"accordian" + prop.index}
-      />
-      <label
-        htmlFor={"accordian" + prop.index}
-        className="flex justify-between p-2 items-center cursor-pointer hover:shadow-lg mb-4 peer-checked:shadow-lg "
+    <div className="">
+      <div
+        className={`flex justify-between p-2 items-center cursor-pointer hover:shadow-lg mb-4 ${state && "shadow-lg"
+          }`}
+        onClick={() => {
+          setState((state) => !state);
+        }}
       >
         <p>{prop.title}</p>
-      </label>
-      <div className="absolute right-2 top-2 peer-checked:block hidden">
-        <BiMinus color="#e11d48" size={25} className="acc-plus " />
+        <div>
+          {state ? (
+            <BiMinus color="#e11d48" size={25} />
+          ) : (
+            <BsPlus color="#e11d48" size={30} />
+          )}
+        </div>
       </div>
-      <div className="absolute right-2 top-2 peer-checked:hidden block">
-        <BsPlus color="#e11d48" size={25} className="acc-plus " />
-      </div>
-      <label className="p-2 hidden overflow-hidden transition-all duration-300 text-gray-500 peer-checked:block">
+      <div
+        className={`${state ? "h-auto p-2" : "h-0"
+          } overflow-hidden transition-all duration-300 text-gray-500 `}
+      >
         {prop.detail}
-      </label>
+      </div>
     </div>
   );
 };

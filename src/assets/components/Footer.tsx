@@ -30,10 +30,10 @@ const Footer = () => {
       <div className="flex flex-col gap-4">
         <h1>Main Menu</h1>
 
-        <a className="text-[#888]" href="/home">
+        <a className="text-[#888]" href="/Home">
           &#8250; Home
         </a>
-        <a className="text-[#888]" href="#about">
+        <a className="text-[#888]" href="/About-us">
           &#8250; About
         </a>
         <a className="text-[#888]" href="/Calculators">
@@ -46,13 +46,13 @@ const Footer = () => {
       <div className="flex flex-col gap-4">
         <h1>Follow us</h1>
 
-        <a className="text-[#888] flex gap-2 items-center" href="/home">
+        <a className="text-[#888] flex gap-2 items-center" href="https://www.facebook.com/finmetindia" target="_blank">
           <FaFacebookF /> Facebook
         </a>
-        <a className="text-[#888] flex gap-2 items-center" href="#about">
+        <a className="text-[#888] flex gap-2 items-center" href="https://twitter.com/FinmetIt" target="_blank">
           <AiOutlineTwitter /> Twitter
         </a>
-        <a className="text-[#888] flex gap-2 items-center" href="/Calculators">
+        <a className="text-[#888] flex gap-2 items-center" href="https://www.instagram.com/finmetindia/" target="_blank">
           <AiOutlineInstagram /> Instagram
         </a>
       </div>
@@ -62,10 +62,10 @@ const Footer = () => {
         <div className="flex h-10">
           <input
             type="email"
-            className="h-full bg-gray-700 pl-2 w-[80%] rounded-l-md"
+            className="h-full bg-gray-700 pl-2 w-[80%]"
             placeholder="Enter your email "
           />
-          <button className="p-2 bg-rose-600 h-full w-[20%] flex justify-center items-center rounded-r-md">
+          <button className="p-2 bg-rose-600 h-full w-[20%] flex justify-center items-center">
             <AiOutlineMail />
           </button>
         </div>
