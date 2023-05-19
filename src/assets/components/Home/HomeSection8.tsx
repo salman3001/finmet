@@ -239,30 +239,64 @@ const HomeSection8 = () => {
                 Here's how Finmet can help you with ITR filing:
               </h1>
               <div className="space-y-3">
-
                 <p>
-                  <span className="font-bold">Expert Guidance:</span> Our knowledgeable experts will guide you through the entire process, explaining the necessary documents, deductions, and exemptions applicable to your specific circumstances. We take the time to understand your financial situation and provide personalized advice to optimize your tax returns.
+                  <span className="font-bold">Expert Guidance:</span> Our
+                  knowledgeable experts will guide you through the entire
+                  process, explaining the necessary documents, deductions, and
+                  exemptions applicable to your specific circumstances. We take
+                  the time to understand your financial situation and provide
+                  personalized advice to optimize your tax returns.
                 </p>
                 <p>
-                  <span className="font-bold">Document Preparation: </span> We assist you in gathering and organizing all the required documents, such as salary statements, investment proofs, rent receipts, and other relevant financial records. Our team ensures that your documents are complete, accurate, and compliant with tax regulations.
+                  <span className="font-bold">Document Preparation: </span> We
+                  assist you in gathering and organizing all the required
+                  documents, such as salary statements, investment proofs, rent
+                  receipts, and other relevant financial records. Our team
+                  ensures that your documents are complete, accurate, and
+                  compliant with tax regulations.
                 </p>
                 <p>
-                  <span className="font-bold">Income Tax Calculation: </span> We meticulously calculate your taxable income, taking into account various factors such as salary, investments, allowances, deductions, and exemptions. Our experts leverage their knowledge and cutting-edge tools to maximize your eligible deductions and minimize your tax liability.
+                  <span className="font-bold">Income Tax Calculation: </span> We
+                  meticulously calculate your taxable income, taking into
+                  account various factors such as salary, investments,
+                  allowances, deductions, and exemptions. Our experts leverage
+                  their knowledge and cutting-edge tools to maximize your
+                  eligible deductions and minimize your tax liability.
                 </p>
                 <p>
-                  <span className="font-bold">Filing Assistance: </span> Our professionals handle the entire filing process on your behalf. We prepare and submit your income tax returns electronically, ensuring that they meet all the necessary legal requirements. We double-check the accuracy of your returns to minimize the chances of errors or discrepancies.
+                  <span className="font-bold">Filing Assistance: </span> Our
+                  professionals handle the entire filing process on your behalf.
+                  We prepare and submit your income tax returns electronically,
+                  ensuring that they meet all the necessary legal requirements.
+                  We double-check the accuracy of your returns to minimize the
+                  chances of errors or discrepancies.
                 </p>
                 <p>
-                  <span className="font-bold">Timely Updates: </span> We keep you informed about the latest developments in tax laws and regulations, including changes in tax slabs, deductions, and compliance requirements. Our team ensures that you are well-prepared and aware of any updates that may impact your tax filing.
+                  <span className="font-bold">Timely Updates: </span> We keep
+                  you informed about the latest developments in tax laws and
+                  regulations, including changes in tax slabs, deductions, and
+                  compliance requirements. Our team ensures that you are
+                  well-prepared and aware of any updates that may impact your
+                  tax filing.
                 </p>
                 <p>
-                  Year-round Tax Planning: Beyond ITR filing, we offer year-round tax planning services to help you proactively manage your tax obligations. Our experts work with you to devise strategies that minimize your tax liability, optimize investments, and plan for long-term financial goals.
+                  Year-round Tax Planning: Beyond ITR filing, we offer
+                  year-round tax planning services to help you proactively
+                  manage your tax obligations. Our experts work with you to
+                  devise strategies that minimize your tax liability, optimize
+                  investments, and plan for long-term financial goals.
                 </p>
                 <p>
-                  At finmet, we strive to make ITR filing a stress-free experience for individuals and businesses alike. With our expertise and personalized approach, you can trust us to handle your tax matters efficiently, accurately, and with the utmost confidentiality.
+                  At finmet, we strive to make ITR filing a stress-free
+                  experience for individuals and businesses alike. With our
+                  expertise and personalized approach, you can trust us to
+                  handle your tax matters efficiently, accurately, and with the
+                  utmost confidentiality.
                 </p>
                 <p>
-                  Don't let the complexities of ITR filing overwhelm you. Contact us today and let us help you navigate the tax landscape with ease and confidence!
+                  Don't let the complexities of ITR filing overwhelm you.
+                  Contact us today and let us help you navigate the tax
+                  landscape with ease and confidence!
                 </p>
                 <p>
                   <table className="w-full">
@@ -304,24 +338,7 @@ const HomeSection8 = () => {
                     </tbody>
                   </table>
                 </p>
-                <p>
-                  <span className="font-bold">Super fast process</span> If you
-                  are running low on time or pretty close to the deadline then
-                  you should reach out to our experts. We provide the fastest
-                  income tax returns filing process in the country
-                </p>
-                <p>
-                  <span className="font-bold">Adept team</span> Filing income
-                  tax returns is one of our daily jobs, our team does it with
-                  such ease!
-                </p>
-                <p>
-                  <span className="font-bold">Popular in town</span> More than
-                  thousands of companies choose finmet for filing their
-                  Income tax. Apart from this, we have a large number of
-                  individuals who choose finmet for filing their income tax
-                  return online.
-                </p>
+
                 <p>
                   All you have to do is reach out to us, sit back, relax, and
                   watch your income tax return filing at super ease.
@@ -413,8 +430,9 @@ const Accordian = (prop: { title: string; detail: string }) => {
   return (
     <div className="">
       <div
-        className={`flex justify-between p-2 items-center cursor-pointer hover:shadow-lg mb-4 ${state && "shadow-lg"
-          }`}
+        className={`flex justify-between p-2 items-center cursor-pointer hover:shadow-lg mb-4 ${
+          state && "shadow-lg"
+        }`}
         onClick={() => {
           setState((state) => !state);
         }}
@@ -429,8 +447,9 @@ const Accordian = (prop: { title: string; detail: string }) => {
         </div>
       </div>
       <div
-        className={`${state ? "h-auto p-2" : "h-0"
-          } overflow-hidden transition-all duration-300 text-gray-500 `}
+        className={`${
+          state ? "h-auto p-2" : "h-0"
+        } overflow-hidden transition-all duration-300 text-gray-500 `}
       >
         {prop.detail}
       </div>

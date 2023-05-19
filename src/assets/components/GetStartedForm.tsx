@@ -10,12 +10,12 @@ const GetStartedForm = () => {
 
   const handelsubmit = () => {
     console.log("submit");
-    let bodyFormData = new FormData();
-    bodyFormData.append("fname", fname)
-    bodyFormData.append("phone", phone)
-    bodyFormData.append("email", email)
-    bodyFormData.append("city", city)
-    bodyFormData.append("message", message)
+    const bodyFormData = new FormData();
+    bodyFormData.append("fname", fname);
+    bodyFormData.append("phone", phone);
+    bodyFormData.append("email", email);
+    bodyFormData.append("city", city);
+    bodyFormData.append("message", message);
 
     axios({
       method: "post",
@@ -27,25 +27,24 @@ const GetStartedForm = () => {
         //handle success
         console.log(response);
 
-        alert("Thank you, Your request has recieved. Our ITR expert will contain you shortly")
-        setFname("")
-        setPhone("")
-        setEmail("")
-        setMessage("")
-        setCity("")
+        alert(
+          "Thank you, Your request has recieved. Our ITR expert will contain you shortly"
+        );
+        setFname("");
+        setPhone("");
+        setEmail("");
+        setMessage("");
+        setCity("");
       })
       .catch(function (response) {
         //handle error
         console.log(response);
-        alert("Something went wrong")
+        alert("Something went wrong");
       });
-
-  }
+  };
 
   return (
-    <form
-      className="bg-white space-y-4 text-black p-5 lg:p-10 rounded-lg shadow-2xl  max-w-lg w-full "
-    >
+    <form className="bg-white space-y-4 text-black p-5 lg:p-10 rounded-lg shadow-2xl  max-w-lg w-full ">
       <h1 className="text-xl font-bold text-center">Get Started! </h1>
       <input
         type="text"
@@ -54,7 +53,9 @@ const GetStartedForm = () => {
         placeholder="Name*"
         className="border-b border-gray-300 p-2 w-full"
         value={fname}
-        onChange={(e) => { setFname(e.target.value) }}
+        onChange={(e) => {
+          setFname(e.target.value);
+        }}
       />
       <input
         type="number"
@@ -63,7 +64,9 @@ const GetStartedForm = () => {
         placeholder="mobile*"
         className="border-b border-gray-300 p-2 w-full"
         value={phone}
-        onChange={(e) => { setPhone(e.target.value) }}
+        onChange={(e) => {
+          setPhone(e.target.value);
+        }}
       />
       <input
         type="email"
@@ -72,7 +75,9 @@ const GetStartedForm = () => {
         placeholder="Email"
         className="border-b border-gray-300 p-2 w-full"
         value={email}
-        onChange={(e) => { setEmail(e.target.value) }}
+        onChange={(e) => {
+          setEmail(e.target.value);
+        }}
       />
       <input
         name="city"
@@ -81,7 +86,9 @@ const GetStartedForm = () => {
         placeholder="City*"
         className="border-b border-gray-300 p-2 w-full"
         value={city}
-        onChange={(e) => { setCity(e.target.value) }}
+        onChange={(e) => {
+          setCity(e.target.value);
+        }}
       />
       <input
         name="message"
@@ -90,7 +97,9 @@ const GetStartedForm = () => {
         placeholder="Service type*"
         className="border-b border-gray-300 p-2 w-full"
         value={message}
-        onChange={(e) => { setMessage(e.target.value) }}
+        onChange={(e) => {
+          setMessage(e.target.value);
+        }}
       />
       <div className="pt-4">
         <button
@@ -98,8 +107,8 @@ const GetStartedForm = () => {
           type="submit"
           className="p-2 px-8 rounded-sm bg-rose-600 text-white w-full"
           onClick={(e) => {
-            e.preventDefault()
-            handelsubmit()
+            e.preventDefault();
+            handelsubmit();
           }}
         >
           Submit

@@ -46,13 +46,25 @@ const Footer = () => {
       <div className="flex flex-col gap-4">
         <h1>Follow us</h1>
 
-        <a className="text-[#888] flex gap-2 items-center" href="https://www.facebook.com/finmetindia" target="_blank">
+        <a
+          className="text-[#888] flex gap-2 items-center"
+          href="https://www.facebook.com/finmetindia"
+          target="_blank"
+        >
           <FaFacebookF /> Facebook
         </a>
-        <a className="text-[#888] flex gap-2 items-center" href="https://twitter.com/FinmetIt" target="_blank">
+        <a
+          className="text-[#888] flex gap-2 items-center"
+          href="https://twitter.com/FinmetI"
+          target="_blank"
+        >
           <AiOutlineTwitter /> Twitter
         </a>
-        <a className="text-[#888] flex gap-2 items-center" href="https://www.instagram.com/finmetindia/" target="_blank">
+        <a
+          className="text-[#888] flex gap-2 items-center"
+          href="https://www.instagram.com/finmetindia/"
+          target="_blank"
+        >
           <AiOutlineInstagram /> Instagram
         </a>
       </div>
