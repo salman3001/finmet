@@ -3,12 +3,11 @@ import { useState } from "react";
 import { BsInfoCircle } from "react-icons/bs";
 import * as Yup from 'yup'
 
-const ITCalculator = () => {
+const ITCalculatorNew = () => {
     const [totalTax, setTotalTax] = useState(0)
 
     const formik = useFormik({
         initialValues: {
-            age: "0-60",
             grossIncome: "",
             incomeExempttions: "",
             otherIncome: "",
@@ -40,57 +39,34 @@ const ITCalculator = () => {
 
             const totalTaxableIncome = totalIncome - totalDeductions
 
-            if (values.age === "0-60") {
-                if (totalTaxableIncome <= 250000) {
-                    totalTax = 0
-                } else if (totalTaxableIncome > 250000 && totalTaxableIncome <= 500000) {
-                    totalTax = (totalTaxableIncome - 250000) / 100 * 5
+            if (totalTaxableIncome <= 300000) {
+                totalTax = 0
+            } else if (totalTaxableIncome > 300000 && totalTaxableIncome <= 600000) {
+                totalTax = (totalTaxableIncome - 300000) / 100 * 5
 
-                } else if (totalTaxableIncome > 500000 && totalTaxableIncome <= 1000000) {
-                    const tax1 = 250000 / 100 * 5
-                    totalTax = tax1 + (totalTaxableIncome - 500000) / 100 * 20
+            } else if (totalTaxableIncome > 600000 && totalTaxableIncome <= 900000) {
+                const tax1 = 300000 / 100 * 5
+                totalTax = tax1 + (totalTaxableIncome - 600000) / 100 * 10
 
-                } else if (totalTaxableIncome > 1000000) {
-                    const tax1 = 250000 / 100 * 5
-                    const tax2 = 500000 / 100 * 20
-                    totalTax = tax1 + tax2 + (totalTaxableIncome - 1000000) / 100 * 30
-
-                }
+            } else if (totalTaxableIncome > 900000 && totalTaxableIncome <= 1200000) {
+                const tax1 = 300000 / 100 * 5
+                const tax2 = 300000 / 100 * 10
+                totalTax = tax1 + tax2 + (totalTaxableIncome - 900000) / 100 * 15
+            } else if (totalTaxableIncome > 1200000 && totalTaxableIncome <= 1500000) {
+                const tax1 = 300000 / 100 * 5
+                const tax2 = 300000 / 100 * 10
+                const tax3 = 300000 / 100 * 15
+                totalTax = tax1 + tax2 + tax3 + (totalTaxableIncome - 1200000) / 100 * 20
+            }
+            else if (totalTaxableIncome > 1500000) {
+                const tax1 = 300000 / 100 * 5
+                const tax2 = 300000 / 100 * 10
+                const tax3 = 300000 / 100 * 15
+                const tax4 = 300000 / 100 * 20
+                totalTax = tax1 + tax2 + tax3 + tax4 + (totalTaxableIncome - 1500000) / 100 * 30
             }
 
-            if (values.age === "60-80") {
-                if (totalTaxableIncome <= 300000) {
-                    totalTax = 0
-                } else if (totalTaxableIncome > 300000 && totalTaxableIncome <= 500000) {
-                    totalTax = (totalTaxableIncome - 300000) / 100 * 5
 
-                } else if (totalTaxableIncome > 500000 && totalTaxableIncome <= 1000000) {
-
-                    const tax1 = 200000 / 100 * 5
-                    totalTax = tax1 + (totalTaxableIncome - 500000) / 100 * 20
-
-                } else if (totalTaxableIncome > 1000000) {
-                    console.log("ran");
-
-                    const tax1 = 200000 / 100 * 5
-                    const tax2 = 500000 / 100 * 20
-                    totalTax = tax1 + tax2 + (totalTaxableIncome - 1000000) / 100 * 30
-
-                }
-            }
-
-            if (values.age === "80 above") {
-                if (totalTaxableIncome <= 500000) {
-                    totalTax = 0
-                } else if (totalTaxableIncome > 500000 && totalTaxableIncome <= 1000000) {
-                    totalTax = (totalTaxableIncome - 500000) / 100 * 20
-
-                } else if (totalTaxableIncome > 1000000) {
-                    const tax1 = 500000 / 100 * 20
-                    totalTax = tax1 + (totalTaxableIncome - 1000000) / 100 * 30
-
-                }
-            }
 
             setTotalTax(totalTax + (totalTax / 100 * 4))
 
@@ -109,21 +85,11 @@ const ITCalculator = () => {
                     <h2 className="text-center text-2xl font-semibold">
                         Income Tax Calculator
                     </h2>
-                    <p className="text-center text-rose-500"> (Old Regime)</p>
+                    <p className="text-center text-rose-500"> (New Regime)</p>
                 </div>
                 <div className="grid grid-cols-2 gap-2">
 
-                    <div className="flex flex-col justify-start gap-1">
-                        <label htmlFor="age" className="text-gray-500 min-h-[2rem] sm:min-h-[1rem]">
-                            Age    <BsInfoCircle className="inline cursor-help text-red-700" title="Your anual gross salary including Basic, HRA, Transposrt allowence, Special Allowence" />
 
-                        </label>
-                        <select className="border p-2" name="age" id="age" value={formik.values.age} onChange={formik.handleChange} defaultValue={"0-60"}>
-                            <option value="0-60">0-60</option>
-                            <option value="60-80">60-80</option>
-                            <option value="80 above">80 above</option>
-                        </select>
-                    </div>
                     <div className="flex flex-col justify-start gap-1">
                         <label htmlFor="grossIncome" className="text-gray-500 min-h-[2rem] sm:min-h-[1rem]">
                             Gross Salary    <BsInfoCircle className="inline cursor-help text-red-700" title="Your anual gross salary including Basic, HRA, Transposrt allowence, Special Allowence" />
@@ -219,4 +185,4 @@ const ITCalculator = () => {
     );
 };
 
-export default ITCalculator;
+export default ITCalculatorNew;

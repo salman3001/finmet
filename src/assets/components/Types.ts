@@ -1,1 +1,1 @@
-export type IModalContent = "youtube-Video" | "ITCalculator";
+export type IModalContent = "youtube-Video" | "ITCalculator" | "ITCalculatorNew";

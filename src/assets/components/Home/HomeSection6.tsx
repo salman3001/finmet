@@ -13,7 +13,10 @@ const HomeSection6 = (prop: { togelModal: (content: IModalContent) => void }) =>
           Income Tax (Old Regime) Calculator
         </p>
       </a>
-      <a href="/Calculators" className="flex flex-col items-center gap-3 hover:scale-110 cursor-pointer transition-transform duration-200">
+      <a href="/Calculators" className="flex flex-col items-center gap-3 hover:scale-110 cursor-pointer transition-transform duration-200" onClick={(e) => {
+        e.preventDefault()
+        prop.togelModal("ITCalculatorNew")
+      }}>
         <Icon color="bg-[#ffd4cc]" />
         <p className="text-xl font-semibold text-center max-w-[15rem]">
           Income Tax (New Regime) Calculator
