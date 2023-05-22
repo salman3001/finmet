@@ -9,7 +9,7 @@ import { GrMoney } from "react-icons/gr";
 const HomeSeciton3 = () => {
   return (
     <div className="px-5 md:px-16 lg:px-20 xl:24 py-8 md:py-10 lg:py-16 space-y-10 font-bold">
-      <h1 className="text-5xl">ITR - Easy Process</h1>
+      <h1 className="text-5xl text-center">ITR - Easy Process</h1>
       <div className="grid lg:grid-cols-2 gap-12">
         {/* <div className="overflow-hidden rounded-xl">
           <img src={steps} alt="" />

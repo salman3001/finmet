@@ -3,15 +3,17 @@ import { BsFillCheckCircleFill } from "react-icons/bs";
 const HomeSection5 = () => {
   return (
     <div className="px-5 md:px-16 lg:px-20 xl:24 py-8 md:py-10 lg:py-16 space-y-10 md:space-y-16">
-      <h1 className="text-5xl font-bold">Our Accounting Services</h1>
-      <div className="grid sm:grid-cols-2 gap-2">
-        <div className="space-y-3">
+      <h1 className="text-5xl font-bold text-center">
+        Our Accounting Services
+      </h1>
+      <div className="grid sm:grid-cols-2 gap-2 sm:place-items-center">
+        <div className="space-y-3 border-l-2 pl-6">
           <ListItem link="/Services-Requset" line="Income Tax Services" />
           <ListItem link="/Services-Requset" line="Company Registration" />
           <ListItem link="/Services-Requset" line="MSME Registration" />
           <ListItem link="/Services-Requset" line="ROC Filing" />
         </div>
-        <div className="space-y-3">
+        <div className="space-y-3 border-l-2 pl-6">
           <ListItem
             link="/Services-Requset"
             line="GST Registration & Filing Services"

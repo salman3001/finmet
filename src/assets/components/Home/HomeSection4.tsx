@@ -1,7 +1,8 @@
 import { BsFillCheckCircleFill } from "react-icons/bs";
 const HomeSection4 = () => {
   return (
-    <div className="px-5 md:px-16 lg:px-20 xl:24 py-8 md:py-10 lg:py-16 bg-gray-100">
+    <div className="px-5 md:px-16 lg:px-20 xl:24 py-8 md:py-10 lg:py-16 bg-gray-100 space-y-16">
+      <h1 className="text-5xl font-bold text-center">Plans and Pricing</h1>
       <div className="grid lg:grid-cols-3 gap-12">
         <Card
           price="999"
