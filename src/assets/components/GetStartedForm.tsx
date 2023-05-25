@@ -9,13 +9,19 @@ const GetStartedForm = () => {
   const [message, setMessage] = useState("");
 
   const handelsubmit = () => {
-    console.log("submit");
+    if (fname === "" || phone === "" || email === "" || city === "" || message === "") {
+      alert("All fields are required")
+      return
+    }
+
     const bodyFormData = new FormData();
     bodyFormData.append("fname", fname);
     bodyFormData.append("phone", phone);
     bodyFormData.append("email", email);
     bodyFormData.append("city", city);
     bodyFormData.append("message", message);
+
+
 
     axios({
       method: "post",
