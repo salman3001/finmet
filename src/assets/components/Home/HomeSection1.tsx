@@ -1,9 +1,9 @@
 import leftart from "../../images/blue-design-left.svg";
 import Rightart from "../../images/yellow-design-right.svg";
 import play from "../../images/play+button.svg";
-import google from "../../images/google-banner-review-new.png";
 import { IModalContent } from "../Types";
 import GetStartedForm from "../GetStartedForm";
+import { FaUserTie } from "react-icons/fa";
 
 const HomeSection1 = (prop: {
   togelModal: (content: IModalContent) => void;
@@ -47,13 +47,15 @@ const HomeSection1 = (prop: {
           <p>2 mins to Understand - Income tax</p>
         </a>
 
-        <div className="flex items-center text-xl gap-4">
-          <img src={google} alt="" />
-          <p>4.3/5 Happy Reviews</p>
-        </div>
+        <a href="#testimonial" className="flex items-center text-xl gap-6">
+          <div className="border-2 border-rose-700 rounded-full p-2">
+            <FaUserTie size={42} color="#e11d48" />
+          </div>
+          <p>Our Happy client reviews</p>
+        </a>
       </div>
       <div className="w-full flex justify-center  h-full items-center">
-<GetStartedForm/>
+        <GetStartedForm togelModal={prop.togelModal} />
       </div>
     </div>
   );

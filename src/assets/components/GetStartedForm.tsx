@@ -1,7 +1,10 @@
 import axios from "axios";
 import { useState } from "react";
+import { IModalContent } from "./Types";
 
-const GetStartedForm = () => {
+const GetStartedForm = (prop: {
+  togelModal: (content: IModalContent) => void;
+}) => {
   const [fname, setFname] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
@@ -9,9 +12,15 @@ const GetStartedForm = () => {
   const [message, setMessage] = useState("");
 
   const handelsubmit = () => {
-    if (fname === "" || phone === "" || email === "" || city === "" || message === "") {
-      alert("All fields are required")
-      return
+    if (
+      fname === "" ||
+      phone === "" ||
+      email === "" ||
+      city === "" ||
+      message === ""
+    ) {
+      alert("All fields are required");
+      return;
     }
 
     const bodyFormData = new FormData();
@@ -21,8 +30,6 @@ const GetStartedForm = () => {
     bodyFormData.append("city", city);
     bodyFormData.append("message", message);
 
-
-
     axios({
       method: "post",
       url: "/request_mail.php",
@@ -30,12 +37,10 @@ const GetStartedForm = () => {
       headers: { "Content-Type": "multipart/form-data" },
     })
       .then(function (response) {
-        //handle success
         console.log(response);
 
-        alert(
-          "Thank you, Your request has recieved. Our ITR expert will contain you shortly"
-        );
+        //handle success
+        prop.togelModal("Thankyou-Message");
         setFname("");
         setPhone("");
         setEmail("");
@@ -43,8 +48,9 @@ const GetStartedForm = () => {
         setCity("");
       })
       .catch(function (response) {
-        //handle error
         console.log(response);
+
+        //handle error
         alert("Something went wrong");
       });
   };

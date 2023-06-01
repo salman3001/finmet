@@ -3,10 +3,13 @@ import { BsPlus } from "react-icons/bs";
 import { BiMinus } from "react-icons/bi";
 import { useState } from "react";
 import GetStartedForm from "../GetStartedForm";
+import { IModalContent } from "../Types";
 
-const HomeSection8 = () => {
+const HomeSection8 = (prop: {
+  togelModal: (content: IModalContent) => void;
+}) => {
   return (
-    <div className="px-5 md:px-16 lg:px-20 xl:24  flex flex-col lg:flex-row gap-8">
+    <div className="px-5 md:px-16 lg:px-20 xl:px-24  flex flex-col lg:flex-row gap-8">
       <div className="w-full lg:w-[70%]">
         <div className="sticky top-0 float-left py-[10vh] hidden xl:inline whitespace-normal w-[20%] h-auto">
           <div className="flex flex-col gap-4 pt-4 [&>a]:text-lg [&>a]:font-bold  ">
@@ -417,7 +420,7 @@ Using an e-Return Intermediary (ERI) to electronically file the income tax retur
       </div>
 
       <div className="sticky  float-right top-0 pb-6 lg:py-[11vh] w-full h-min lg:w-[30%]">
-        <GetStartedForm />
+        <GetStartedForm togelModal={prop.togelModal} />
       </div>
     </div>
   );

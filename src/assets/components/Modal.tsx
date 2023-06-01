@@ -3,6 +3,7 @@ import YoutubeVideo from "./YoutubeVideo";
 import { IModalContent } from "./Types";
 import ITCalculator from "./ITCalculator";
 import ITCalculatorNew from "./ITCalculatorNew";
+import ThankYouMessage from "./ThankYouMessage";
 
 const Modal = (prop: {
   content: IModalContent;
@@ -27,6 +28,7 @@ const Modal = (prop: {
             {prop.content === "youtube-Video" && <YoutubeVideo />}
             {prop.content === "ITCalculator" && <ITCalculator />}
             {prop.content === "ITCalculatorNew" && <ITCalculatorNew />}
+            {prop.content === "Thankyou-Message" && <ThankYouMessage />}
             <div className="absolute top-2 right-2 cursor-pointer">
               <RiCloseCircleFill
                 color="#e11d48"
